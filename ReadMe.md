@@ -58,7 +58,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ## Structure du projet 
-
+```bash
 API-Hub-Eau/
 │
 ├── app.py                  # Application principale Streamlit
@@ -70,7 +70,7 @@ API-Hub-Eau/
 ├── hub_o/
 │   └── HubEauClass.py      # Classe d’accès aux APIs Hub’Eau
 └── hub_o.egg-info/         # (généré automatiquement si module installé)
-
+```
 
 ## 🔧 Installer le module hub_o localement
 
