@@ -34,11 +34,11 @@ cd API-Hub-Eau
 ```bash
 python -m venv .venv
 ```
-#### Sous Windows
+#### Activer l'environnement sous Windows
 ```bash
 .venv\Scripts\activate
 ```
-#### Sous macOS/Linux
+#### Activer l'environnement sous macOS/Linux
 ```bash
 source .venv/bin/activate
 ```
