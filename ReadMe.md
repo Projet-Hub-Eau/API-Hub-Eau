@@ -27,31 +27,36 @@ Cette application permet d'explorer et de télécharger les données de différe
 ```bash
 git clone https://github.com/fernand-f/API-Hub-Eau.git
 cd API-Hub-Eau
-
+```
 
 ### 2. Créer un environnement python
 
+```bash
 python -m venv .venv
+```
 # Sous Windows
+```bash
 .venv\Scripts\activate
+```
 # Sous macOS/Linux
+```bash
 source .venv/bin/activate
-
+```
 ### 3. Installer les dépendances
 Avec pip : 
-
+```bash
 pip install -r requirements.txt
-
+```
 Avec conda : 
-
+```bash
 conda create -n hubeau-env python=3.10
 conda activate hubeau-env
 pip install -r requirements.txt
-
+```
 ## Lancer l'application depuis le bash
-
+```bash
 streamlit run app.py
-
+```
 ## Structure du projet 
 
 API-Hub-Eau/
@@ -70,12 +75,12 @@ API-Hub-Eau/
 ## 🔧 Installer le module hub_o localement
 
 En mode développement (recommandé):
-
+```bash
 pip install -e .
-
+```
 Ou en mode standard : 
-
+```bash
 pip install .
-
+```
 
 
