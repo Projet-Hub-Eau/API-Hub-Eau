@@ -15,7 +15,7 @@ Cette application permet d'explorer et de télécharger les données de différe
 
 - Python 3.9 ou plus récent
 - Git (facultatif si vous téléchargez manuellement les fichiers)
-- Visual Studio Code (VS Code)
+- Visual Studio Code (VS Code) ou Anaconda
 - Une connexion Internet (pour accéder aux APIs Hub'Eau)
 
 ---
