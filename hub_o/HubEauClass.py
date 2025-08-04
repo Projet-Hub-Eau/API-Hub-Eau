@@ -2,7 +2,7 @@
 """
 Created on Fri Jul 11 15:43:26 2025
 
-@author: ferna
+@authors: fernand fort, felix françois
 """
 
 import json
