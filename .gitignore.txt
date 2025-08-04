@@ -71,6 +71,9 @@ data/
 Seine/
 Rhone/
 
+# Ou ignorer tous les notebooks (optionnel)
+*.ipynb
+
 
 **LICENSE (MIT)**
 

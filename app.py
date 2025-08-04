@@ -5,6 +5,7 @@ from streamlit_folium import st_folium
 from hub_o.HubEauClass import EtatPiscicoleAPI, QualiteCoursEauAPI
 import os
 import zipfile
+import shutil
 
 # Initialisation des APIs
 api_poissons = EtatPiscicoleAPI()
@@ -75,7 +76,7 @@ if st.session_state.stations_summary is not None:
             color=color_scale(row["nombre_observations"]),
             fill=True,
             fill_opacity=0.7,
-            popup=f"{row['libelle_entite_hydrographique']}<br>Opérations: {row['nombre_operations']}<br>Observations: {row['nombre_observations']}"
+            popup=f"{row['libelle_station']}<br>Opérations: {row['nombre_operations']}<br>Observations: {row['nombre_observations']}"
         ).add_to(m)
 
     st_folium(m, width=700, height=500)
@@ -83,11 +84,11 @@ if st.session_state.stations_summary is not None:
     st.subheader("Sélection des stations à étudier")
     stations_a_etudier = st.multiselect(
         "Choisissez les stations :",
-        options=stations_summary["libelle_entite_hydrographique"].tolist(),
+        options=stations_summary["libelle_station"].tolist(),
         default=[]
     )
 
-    stations_utiles = stations_summary[stations_summary["libelle_entite_hydrographique"].isin(stations_a_etudier)]
+    stations_utiles = stations_summary[stations_summary["libelle_station"].isin(stations_a_etudier)]
     st.session_state.codes_station_utiles = stations_utiles["code_station"].tolist()
 
     if st.button("Valider la sélection"):
@@ -153,3 +154,4 @@ if st.session_state.validated:
         st.download_button("💾 Télécharger les données compressées (.zip)", f, file_name=zip_path)
 
     st.success("Extraction terminée et données sauvegardées avec succès.")
+    shutil.rmtree(dossier_racine)
