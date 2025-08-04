@@ -72,7 +72,17 @@ Seine/
 Rhone/
 
 # Ou ignorer tous les notebooks (optionnel)
-*.ipynb
+.ipynb_checkpoints/
+
+# Ignorer les fichiers ZIP
+*.zip
+
+# Autres fichiers souvent inutiles
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
 
 
 **LICENSE (MIT)**
