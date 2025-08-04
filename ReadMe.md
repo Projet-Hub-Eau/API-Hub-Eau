@@ -36,7 +36,7 @@ python -m venv .venv
 ```
 #### Activer l'environnement sous Windows
 ```bash
-.venv\Scripts\activate
+.venv\Scripts\activate.bat
 ```
 #### Activer l'environnement sous macOS/Linux
 ```bash
